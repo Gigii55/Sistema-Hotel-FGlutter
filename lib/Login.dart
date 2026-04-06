@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:primeiro_app/home.dart';
+import 'package:primeiro_app/pagina_inicial.dart';
 import 'EsqueceuSenha.dart';
 
 class Login extends StatelessWidget {
@@ -15,20 +17,15 @@ class Login extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text('LOGIN', style: TextStyle(fontSize: 30)),
-                const SizedBox(
-                  height: 20,
-                ), // Isso aqui serve para dar um espaço entre o texto e o campo
+                const SizedBox(height: 20),
                 const TextField(
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
                     labelText: 'Nome Completo',
                     hintText: 'Digite seu nome aqui',
-                    border:
-                        OutlineInputBorder(), // Cria aquela bordinha ao ao redor do campo
-                    prefixIcon: Icon(
-                      Icons.person,
-                    ), // Coloca um ícone de bonequinho no início
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.person),
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -39,8 +36,7 @@ class Login extends StatelessWidget {
                     fillColor: Colors.white,
                     labelText: 'Senha',
                     hintText: 'Digite sua senha aqui',
-                    border:
-                        OutlineInputBorder(), // Cria aquela bordinha ao ao redor do campo
+                    border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.password),
                   ),
                 ),
@@ -59,13 +55,23 @@ class Login extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PaginaInicial(),
+                          ),
+                        );
+                      },
                       child: const Text('ENTRAR'),
                     ),
                     const SizedBox(width: 15),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Home()),
+                        );
                       },
                       child: const Text('VOLTAR PARA HOME'),
                     ),

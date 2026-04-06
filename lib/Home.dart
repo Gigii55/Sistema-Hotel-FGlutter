@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Login.dart'; // Importa o login para o botão funcionar
+import 'Login.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -7,7 +7,6 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Mesma cor de fundo que você usou na Tela1 e Tela2
       backgroundColor: const Color.fromARGB(255, 141, 188, 211),
       body: SafeArea(
         child: Center(
@@ -26,11 +25,10 @@ class Home extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: 50), // Um espaço maior para os botões
+                const SizedBox(height: 50),
 
                 ElevatedButton(
                   onPressed: () {
-                    // Leva para a sua tela de Login (Tela1)
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const Login()),

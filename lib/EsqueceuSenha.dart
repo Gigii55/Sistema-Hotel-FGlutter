@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:primeiro_app/confirma_email.dart';
 
 class EsqueceuSenha extends StatelessWidget {
   const EsqueceuSenha({super.key});
@@ -29,7 +30,14 @@ class EsqueceuSenha extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ConfirmaEmail(),
+                        ),
+                      );
+                    },
                     child: const Text('ENVIAR EMAIL'),
                   ),
                   const SizedBox(width: 15),
