@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:primeiro_app/confirmacaoCancelamento.dart';
+import 'package:primeiro_app/pagina_inicial.dart';
 
 class Cancelamento extends StatelessWidget {
   const Cancelamento({super.key});
@@ -28,12 +30,31 @@ class Cancelamento extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Confirmacaocancelamento(),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red,
                   foregroundColor: Colors.white,
                 ),
                 child: Text('CANCELAR'),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PaginaInicial(),
+                    ),
+                  );
+                },
+                child: Text('VOLTAR'),
               ),
             ],
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app/Home.dart';
+import 'package:primeiro_app/telaQuartos.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Home(),
+      home: Telaquartos(),
     );
   }
 }

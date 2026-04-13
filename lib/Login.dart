@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app/home.dart';
 import 'package:primeiro_app/pagina_inicial.dart';
+import 'package:primeiro_app/telaQuartos.dart';
+
 import 'EsqueceuSenha.dart';
 
 class Login extends StatelessWidget {
@@ -70,7 +72,9 @@ class Login extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Home()),
+                          MaterialPageRoute(
+                            builder: (context) => Telaquartos(),
+                          ),
                         );
                       },
                       child: const Text('VOLTAR PARA HOME'),

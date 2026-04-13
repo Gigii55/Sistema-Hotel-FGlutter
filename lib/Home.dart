@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:primeiro_app/cadastro.dart';
+
 import 'Login.dart';
 
 class Home extends StatelessWidget {
@@ -40,7 +42,12 @@ class Home extends StatelessWidget {
                 const SizedBox(height: 20),
 
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Cadastro()),
+                    );
+                  },
                   child: const Text('FAZER CADASTRO'),
                 ),
               ],

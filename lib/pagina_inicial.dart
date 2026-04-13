@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app/cancelamento.dart';
+import 'package:primeiro_app/home.dart';
+import 'package:primeiro_app/telaQuartos.dart';
 
 class PaginaInicial extends StatelessWidget {
   const PaginaInicial({super.key});
@@ -140,7 +142,28 @@ class PaginaInicial extends StatelessWidget {
 
                       child: Text('CANCELAR RESERVA'),
                     ),
-                    const SizedBox(height: 10),
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(20),
+                width: 380,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Column(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Telaquartos(),
+                          ),
+                        );
+                      },
+                      child: Text('VOLTAR HOME'),
+                    ),
                   ],
                 ),
               ),
